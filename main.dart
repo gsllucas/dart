@@ -1,12 +1,17 @@
 // Função principal de instancia que serve para rodar
 // a aplicação em Dart, sempre é necessário chamá-la
 
+// type annotation comes first on dart
+
 void main() {
   integerVariables();
   doubleVariables();
   stringVariables();
   whileLoop();
   forLoop();
+  ifCondition();
+  booleanConditions();
+  switchCase();
 }
 
 integerVariables() {
@@ -79,5 +84,48 @@ forLoop() {
 
   for (counter; counter <= 10; counter++) {
     print(counter);
+  }
+
+  // if its necessary, we can stop loops with 'break'
+}
+
+// CONDITIONS
+
+ifCondition() {
+  int age = 17;
+  if (age >= 18) {
+    print('You have legal age');
+  } else {
+    print('You dont have legal age');
+  }
+
+  age < 18 ? print('You dont have legal age') : print('You have legal age');
+}
+
+booleanConditions() {
+  bool hasCollege = true;
+
+  if (hasCollege) {
+    print('You have college');
+  } else {
+    print('You does not have college');
+  }
+}
+
+switchCase() {
+  String door = 'opened';
+
+  switch (door) {
+    case 'closed':
+      print('The door is closed');
+      break;
+    case 'semi-opened':
+      print('The door is semi-opened');
+      break;
+    case 'opened':
+      print('The door is opened');
+      break;
+    default:
+      print('Default state goes here');
   }
 }
