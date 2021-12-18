@@ -6,7 +6,7 @@ void main() {
   } catch (error) {
     print(error);
   } finally {
-    print('It ends here');
+    print('Code ends here');
   }
 }
 
