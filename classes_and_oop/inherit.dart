@@ -18,6 +18,8 @@ void main() {
             ? animal.meow()
             : null;
   });
+
+  dog.sleep();
 }
 
 class Animal {
@@ -37,6 +39,12 @@ class Animal {
 class Dog extends Animal {
   bark() {
     print('Barked');
+  }
+
+  @override
+  void sleep() {
+    super.sleep();
+    print('Sleept snoring a lot!!!');
   }
 }
 
