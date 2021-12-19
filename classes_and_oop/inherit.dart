@@ -25,7 +25,7 @@ void main() {
   dog.sleep();
 }
 
-class Animal {
+abstract class Animal {
   String name;
   int age;
   double? height;
@@ -40,6 +40,8 @@ class Animal {
   void eat() {
     print('Ate');
   }
+
+  death();
 }
 
 class Dog extends Animal {
@@ -54,6 +56,11 @@ class Dog extends Animal {
     super.sleep();
     print('Sleept snoring a lot!!!');
   }
+
+  @override
+  death() {
+    print('He kick the bucket :(');
+  }
 }
 
 class Cat extends Animal {
@@ -67,5 +74,10 @@ class Cat extends Animal {
   void sleep() {
     super.sleep();
     print('Sleept for more than 15 hours!!! Lazy cat');
+  }
+
+  @override
+  death() {
+    print('Lost one of his seven lifes');
   }
 }
