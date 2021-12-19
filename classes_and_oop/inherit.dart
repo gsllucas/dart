@@ -62,4 +62,10 @@ class Cat extends Animal {
   meow() {
     print('Meowed');
   }
+
+  @override
+  void sleep() {
+    super.sleep();
+    print('Sleept for more than 15 hours!!! Lazy cat');
+  }
 }
